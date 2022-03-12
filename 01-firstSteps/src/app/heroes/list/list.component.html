@@ -1,8 +1,8 @@
 <p>Hero List</p>
 
-<div>
-  <h3>Deleted Hero:</h3>
-  <span>{{deletedHero}}</span>
+<div *ngIf="heroes.length !== 0">
+  <h3>Deleted Hero: <small>{{deletedHero}}</small></h3>
+  
 </div>
 
 
