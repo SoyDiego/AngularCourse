@@ -16,4 +16,12 @@ export class HeroeComponent {
   getName(): string {
     return `${this.name} is ${this.age} years old`;
   }
+
+  changeName(name: string): void {
+    this.name = name;
+  }
+
+  changeAge(age: number): void {
+    this.age = age;
+  }
 }
