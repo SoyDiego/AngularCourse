@@ -1,11 +1,10 @@
 <h1>Dragon Ball Z</h1>
-<hr>
-
+<hr />
 
 <div class="row">
   <div class="col">
     <h3>Characters</h3>
-    <hr>
+    <hr />
     <ul>
       <li>Krillin - 700</li>
       <li>Goku - 15000</li>
@@ -15,13 +14,20 @@
 
   <div class="col">
     <h3>Add character</h3>
-    <hr>
+    <hr />
 
     <form (ngSubmit)="addCharacter()">
-      <input type="text" name="name" placeholder="Name">
-      <input type="number" name="power" placeholder="Power">
-      <button>Add</button>
+      <input type="text"
+        name="name"
+        placeholder="Name"
+        [(ngModel)]="new.name" />
 
+      <input type="
+        number"
+        name="power"
+        placeholder="Power"
+        [(ngModel)]="new.power" />
+      <button>Add</button>
     </form>
   </div>
 </div>
