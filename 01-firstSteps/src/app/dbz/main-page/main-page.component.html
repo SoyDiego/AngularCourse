@@ -17,7 +17,7 @@
     <h3>Add character</h3>
     <hr>
 
-    <form>
+    <form (ngSubmit)="addCharacter()">
       <input type="text" name="name" placeholder="Name">
       <input type="number" name="power" placeholder="Power">
       <button>Add</button>
