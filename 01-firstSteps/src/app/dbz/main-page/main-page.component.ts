@@ -18,16 +18,7 @@ export class MainPageComponent {
     power: 0,
   };
 
-  addCharacter() {
-    if (this.new.name.trim().length === 0) {
-      return;
-    }
-
-    this.characters.push(this.new);
-    this.new = {
-      name: '',
-      power: 0,
-    };
+  addNewCharacter(character: Character): void {
+    this.characters.push(character)
   }
-
 }
