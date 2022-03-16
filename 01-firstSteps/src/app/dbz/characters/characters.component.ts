@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Character } from '../interfaces/dbz.interfaces';
 
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
 })
 export class CharactersComponent {
-  characters: any[] = [];
+  @Input() characters: Character[] = [];
 }

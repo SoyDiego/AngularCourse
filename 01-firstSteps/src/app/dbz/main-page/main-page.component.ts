@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-
-interface Character {
-  name: string;
-  power: number;
-}
+import { Character } from '../interfaces/dbz.interfaces';
 
 @Component({
   selector: 'app-main-page',
