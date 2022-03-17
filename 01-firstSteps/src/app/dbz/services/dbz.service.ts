@@ -13,7 +13,9 @@ export class DbzService {
   get characters(): Character[] {
     return [...this._characters];
   }
-  constructor() {
-    console.log('DbzService initialized');
+  constructor() {}
+
+  addCharacter(character: Character) {
+      this._characters.push(character);
   }
 }
