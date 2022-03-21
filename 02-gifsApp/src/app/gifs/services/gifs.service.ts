@@ -11,12 +11,20 @@ export class GifsService {
   }
 
   searchGifs(search: string) {
-    this._historial.unshift(search);
+    search = search.trim().toLowerCase();
+
+    if (!this._historial.includes(search)) {
+      this._historial.unshift(search);
+    }
+
+    //Show only 10 items
+    this._historial = this._historial.splice(0, 10);
+
     // return fetch(
     //   `https://api.giphy.com/v1/gifs/search?q=${search}&api_key=dc6zaTOxFJmzC&limit=10`
     // )
     //   .then((resp) => resp.json())
     //   .then((resp) => resp.data);
-    console.log(this._historial)
+    console.log(this._historial);
   }
 }

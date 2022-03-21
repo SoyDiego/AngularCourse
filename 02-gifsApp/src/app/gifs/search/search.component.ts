@@ -13,6 +13,11 @@ export class SearchComponent {
 
   onSearch() {
     const value = this.txtSearch.nativeElement.value;
+
+    if (value.trim().length === 0) {
+      return;
+    }
+
     this.gifService.searchGifs(value);
     this.txtSearch.nativeElement.value = '';
   }

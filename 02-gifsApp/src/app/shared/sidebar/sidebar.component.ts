@@ -12,6 +12,4 @@ export class SidebarComponent {
   get historial() {
     return this.gifService.historial;
   }
-
-
 }
