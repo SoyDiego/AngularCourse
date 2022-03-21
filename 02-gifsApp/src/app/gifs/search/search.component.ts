@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class SearchComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+export class SearchComponent {
+  @ViewChild('txtSearch') txtSearch!: ElementRef<HTMLInputElement>;
+  onSearch() {
+    const value = this.txtSearch.nativeElement.value;
+    console.log(value)
+    this.txtSearch.nativeElement.value = '';
   }
-
 }

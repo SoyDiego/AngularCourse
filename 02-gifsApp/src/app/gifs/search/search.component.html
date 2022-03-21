@@ -1,4 +1,6 @@
     <h5>Search:</h5>
     <input type="text"
       class="form-control"
-      placeholder="Search GIFs">
+      placeholder="Search GIFs"
+      (keyup.enter)="onSearch()"
+      #txtSearch>
