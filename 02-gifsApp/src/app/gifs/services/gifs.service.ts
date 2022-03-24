@@ -10,6 +10,8 @@ export class GifsService {
   private apiKey: string = environment.apiKey;
   private _historial: string[] = [];
 
+  public results: any[] = [];
+
   get historial() {
     return [...this._historial];
   }
@@ -31,7 +33,7 @@ export class GifsService {
         `https://api.giphy.com/v1/gifs/search?api_key=${this.apiKey}&q=${search}&limit=25`
       )
       .subscribe((response: any) => {
-        console.log(response);
+        this.results = response.data;
       });
   }
 }
