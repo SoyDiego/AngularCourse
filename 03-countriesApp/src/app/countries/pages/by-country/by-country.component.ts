@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class ByCountryComponent implements OnInit {
+export class ByCountryComponent {
+
+  search: string = '';
 
   constructor() { }
 
-  ngOnInit(): void {
+  searchCountry(){
+    console.log(this.search);
   }
 
 }
