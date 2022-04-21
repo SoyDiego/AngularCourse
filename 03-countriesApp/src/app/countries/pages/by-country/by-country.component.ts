@@ -16,10 +16,10 @@ export class ByCountryComponent {
 
   searchCountry() {
     this.hasError = false;
-    
+
     this.countryService.searchCountry(this.search).subscribe(
-      (data) => {
-        console.log(data);
+      (countries) => {
+        console.log(countries);
       }, (error) => {
         this.hasError = true;
         console.log(error);
