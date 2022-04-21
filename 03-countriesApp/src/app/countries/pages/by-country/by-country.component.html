@@ -11,11 +11,11 @@
 
 <hr />
 
-<div class="alert alert-danger">
-  Nothing found for <strong>asdasdasd</strong>
+<div *ngIf="this.hasError" class="alert alert-danger">
+  Nothing found for <strong>{{search}}</strong>
 </div>
 
-<div class="row">
+<div *ngIf="!this.hasError" class="row">
   <div class="col">
     <table class="table table-hover">
       <thead>
