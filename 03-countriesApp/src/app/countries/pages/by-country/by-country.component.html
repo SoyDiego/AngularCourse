@@ -15,7 +15,7 @@
   Nothing found for <strong>{{search}}</strong>
 </div>
 
-<div *ngIf="!this.hasError" class="row">
+<div *ngIf="this.countries.length > 0" class="row">
   <div class="col">
     <table class="table table-hover">
       <thead>
@@ -29,12 +29,12 @@
       </thead>
 
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Flag</td>
-          <td>Name</td>
-          <td>9,826,670</td>
-          <td>USD</td>
+        <tr *ngFor="let country of countries; let i = index">
+          <td>{{i + 1}}</td>
+          <td><img class="small-flag" [src]="country.flag" alt=""></td>
+          <td>{{country.name}}</td>
+          <td>{{country.population | number}}</td>
+          <td><a [routerLink]="['/country', country.alpha2Code]">See more...</a></td>
         </tr>
       </tbody>
     </table>
