@@ -19,7 +19,6 @@ export class ByCountryComponent {
   searchCountry(search: string) {
     this.hasError = false;
     this.search = search
-
     this.countryService.searchCountry(search).subscribe(
       (countries) => {
         this.countries = countries;
@@ -29,6 +28,11 @@ export class ByCountryComponent {
       }
     )
 
+  }
+
+  suggestions(search: string) {
+    this.hasError = false;
+    //TODO Create suggestions
   }
 
 }
