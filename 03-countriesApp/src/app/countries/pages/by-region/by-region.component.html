@@ -1,19 +1,21 @@
-<h2>By Region <small>{{activeRegion | titlecase}}</small></h2>
-
-<h5>Select region:</h5>
-
-<div class="row">
-  <div class="col">
-    <!-- [class.btn-primary]="region === activeRegion" -->
-    <!-- [ngClass]="{'btn-primary': region === activeRegion,
-          'btn-outline-primary': region !== activeRegion
-          }" -->
-    <button
-      *ngFor="let region of regions"
-      [class]="getCSSClass(region)"
-      (click)="activateRegion(region)">
-      {{region | titlecase}}
-    </button>
+<div class="animate__animated animate__fadeIn animate__faster">
+  <h2>By Region <small>{{activeRegion | titlecase}}</small></h2>
+  
+  <h5>Select region:</h5>
+  
+  <div class="row">
+    <div class="col">
+      <!-- [class.btn-primary]="region === activeRegion" -->
+      <!-- [ngClass]="{'btn-primary': region === activeRegion,
+            'btn-outline-primary': region !== activeRegion
+            }" -->
+      <button
+        *ngFor="let region of regions"
+        [class]="getCSSClass(region)"
+        (click)="activateRegion(region)">
+        {{region | titlecase}}
+      </button>
+    </div>
   </div>
 </div>
 

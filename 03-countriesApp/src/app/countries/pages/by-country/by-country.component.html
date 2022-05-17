@@ -1,13 +1,15 @@
-<h2>By Country</h2>
-<hr />
+<div class="animate__animated animate__fadeIn animate__faster">
+  <h2>By Country</h2>
+  <hr />
 
-<div class="row">
-  <div class="col">
-    <app-country-input (onEnter)="searchCountry($event)" (onDebounce)="suggestions($event)" placeholder="Search Country..."></app-country-input>
+  <div class="row">
+    <div class="col">
+      <app-country-input (onEnter)="searchCountry($event)" (onDebounce)="suggestions($event)" placeholder="Search Country..."></app-country-input>
+    </div>
   </div>
-</div>
 
-<hr />
+  <hr />
+</div>
 
 <div *ngIf="this.hasError" class="alert alert-danger">
   Nothing found for <strong>{{search}}</strong>
