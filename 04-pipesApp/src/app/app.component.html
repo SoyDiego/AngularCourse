@@ -3,6 +3,9 @@
   <h1>{{value | number}}</h1>
 </div>
 
-<button pButton (click)="showName()" label="Show name">
-
+<button pButton (click)="showName()" label="Show name" icon="pi pi-check" iconPos="right" class="p-button-help">
 </button>
+
+<p-card [header]="name | titlecase">
+  Content
+</p-card>
