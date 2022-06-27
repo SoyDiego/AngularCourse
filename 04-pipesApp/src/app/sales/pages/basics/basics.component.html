@@ -40,6 +40,14 @@
                 <li>Date | date:'MMMM'</li>
                 <li>Date | date:'dd, MMMM, yyyy'</li>
             </ul>
+
+            <hr>
+
+            <ul>
+                <li>Date | date:'long':'GMT+3'</li>
+                <li>Date | date:'long':'GMT-3'</li>
+                <li>Date | date:'long':'':'fr'</li>
+            </ul>
         </p-card>
     </div>
 
@@ -53,6 +61,14 @@
 
                 <li>{{date | date:'MMMM'}}</li>
                 <li>{{date | date:'dd MMMM, yyyy'}}</li>
+            </ul>
+
+            <hr>
+
+            <ul>
+                <li>{{date | date:'long':'GMT+3':'es-AR'}}</li>
+                <li>{{date | date:'long':'GMT-3'}}</li>
+                <li>{{date | date:'long':'':'fr'}}</li>
             </ul>
         </p-card>
     </div>
