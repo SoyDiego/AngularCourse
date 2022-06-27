@@ -11,4 +11,6 @@ export class BasicsComponent {
   lowerCaseName: string = 'diego';
   upperCaseName: string = 'DIEGO';
   fullName: string = 'DiEgO TeStiNg';
+
+  date: Date = new Date();
 }
