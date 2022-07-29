@@ -23,7 +23,14 @@ export class NoCommonsComponent {
     '=0': 'no tenemos ningún cliente esperando.',
     '=1': 'tenemos un cliente esperando.',
     'other': 'tenemos # clientes esperando.'
-
   }
 
+  changePerson() {
+    this.name = 'Juan';
+    this.genre = 'male'
+  }
+
+  deleteClient() {
+    this.clients.pop()
+  }
 }
